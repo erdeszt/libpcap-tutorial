@@ -1,7 +1,7 @@
 /*
  * Original author: Martin Casado (https://github.com/lsanotes/libpcap-tutorial)
  * Refactored by: erdeszt (https://github.com/erdeszt)
- * Build with: `gcc basic_capture.c -Wall -O3 -lpcap -o app` (or `make capture`)
+ * Build with: `gcc capture.c -Wall -O3 -lpcap -o app` (or `make capture`)
  * Run with: sudo ./build/capture (or `make run_capture`)
  */
 
