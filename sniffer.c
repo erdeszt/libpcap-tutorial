@@ -5,17 +5,17 @@
  * Run with: sudo ./build/sniffer (or `make run_sniffer`)
  */
 
- #include <pcap.h>
- #include <string.h>
- #include <stdlib.h>
- #include <ctype.h>
+#include <pcap.h>
+#include <string.h>
+#include <stdlib.h>
+#include <ctype.h>
 
- #define MAX_BYTES_TO_CAPTURE 2048
+#define MAX_BYTES_TO_CAPTURE 2048
 
 /* Callback function called by pcap_loop() everytime
  * a packet arrives to the network card.
  */
- void process_packet(u_char* arg, const struct pcap_pkthdr* packet_header, const u_char* packet) {
+void process_packet(u_char* arg, const struct pcap_pkthdr* packet_header, const u_char* packet) {
   int i;
   int* counter = (int*)arg;
 
@@ -30,7 +30,7 @@
       printf("\n");
     }
   } 
- }
+}
 
 int main(int argc, char** argv) {
   int count = 0;
