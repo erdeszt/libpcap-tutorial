@@ -63,7 +63,6 @@ int main(int argc, char** argv) {
     exit(1);
   }
 
-  /* Vars: fp, filter_exp, net */
   if (pcap_compile(handler, &filter_program, filter_expression, 0, net) == -1) {
     fprintf(stderr, "pcap_compile('%s'): %s\n", filter_expression, pcap_geterr(handler));
     exit(1);
