@@ -25,7 +25,7 @@ int main(int argc, char **argv) {
   struct pcap_pkthdr packet_header;
   struct ether_header *ethernet_header;
     
-    /* grab a device to peak into */
+  /* grab a device to peak into */
   if (argc > 1) {
     device = argv[1];
   }

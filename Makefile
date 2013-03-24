@@ -13,5 +13,17 @@ sniffer:
 run_sniffer:
 	sudo ./build/sniffer
 
+interfaces:
+	$(CC) interfaces.c $(CFLAGS) -o build/interfaces
+
+run_interfaces:
+	sudo ./build/interfaces
+
+filter:
+	$(CC) filter.c $(CFLAGS) -o build/filter
+
+run_filter:
+	sudo ./build/filter
+
 clean:
 	rm build/*
