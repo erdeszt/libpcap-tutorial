@@ -25,5 +25,11 @@ filter:
 run_filter:
 	sudo ./build/filter
 
+arp:
+	$(CC) arp.c $(CFLAGS) -o build/arp
+
+run_arp:
+	sudo ./build/arp
+
 clean:
 	rm build/*
