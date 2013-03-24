@@ -29,19 +29,19 @@ typedef struct _arp_header {
 } arp_header_t;
 
 int main(int argc, char** argv) {
-	int i;
-	char error_buffer[PCAP_ERRBUF_SIZE];
+  int i;
+  char error_buffer[PCAP_ERRBUF_SIZE];
   char* device;
   char* filter_expression = "arp";
-	bpf_u_int32 net = 0,
-				mask = 0;
-	struct bpf_program filter_program;
-	pcap_t* handler;
-	struct pcap_pkthdr packet_header;
-	const unsigned char* packet;
-	arp_header_t* arp_header;
+  bpf_u_int32 net = 0,
+              mask = 0;
+  struct bpf_program filter_program;
+  pcap_t* handler;
+  struct pcap_pkthdr packet_header;
+  const unsigned char* packet;
+  arp_header_t* arp_header;
 
-	if (argc > 1) {
+  if (argc > 1) {
     device = argv[1];
   }
   else {
